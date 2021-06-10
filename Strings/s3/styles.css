@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+* {
+  font-family: 'Rubik', sans-serif;
+}
+#prompt {
+  text-decoration: underline orangered;
+  font-weight: 600;
+  text-align: center;
+}
+
+.inputbutton {
+  color: black;
+  text-align: center;
+  border: 3px solid black;
+  font-size: 15px;
+  padding: 5px;
+  text-decoration: none;
+  background: rgba(204, 204, 204, 0.5);
+}
+
+.input {
+  font-size: 2vw;
+  font-weight: 600;
+  width: 50vw;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: rgba(204, 204, 204, 0.5);
+}
