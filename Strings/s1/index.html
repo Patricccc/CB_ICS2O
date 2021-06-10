@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>008 - Strings - s1</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <script src="script.js"></script>
+      <h2 id="prompt">Select a Function and Input the Parameters</h2>
+    <div style="text-align: center;" id="selectdiv">
+      <select id="functionselect">
+        <option value="substring">Sub-string</option>
+        <option value="indexof">indexOf</option>
+        <option value="lastindexof">Last IndexOf</option>
+        <option value="replace">Replace</option>
+        <option value="touppercase">To Uppercase</option>
+        <option value="length">Length</option>
+        <option value="includes">Includes</option>
+        <option value="startswith">Starts With</option>
+        <option value="charat">Char At</option>
+        <option value="charcodeat">Char Code At</option>
+        <option value="fromcharcode">From Code At</option>
+        <option value="same">Equal?</option>
+      </select><br><br>
+      <button class="inputbutton" onclick="string1()">Submit</button>
+    </div>
+
+    <div style="text-align: center; visibility: hidden;" id="inputdiv">
+      <span id="inputfield"></span><br><br>
+      <button class="inputbutton" onclick="answer()">Return the Answer</button>
+      <p class="pagedesc" id="output"></p>
+      <button class="inputbutton" onclick="reset()">Try Another Function</button>
+    </div>
+  </body>
+</html>
