@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Andika&display=swap');
+* {
+  font-family: 'Andika', sans-serif;
+}
+#prompt {
+  text-decoration: underline greenyellow;
+  font-weight: 300;
+  text-align: center;
+}
+
+.inputbutton {
+  color: black;
+  text-align: center;
+  border: 3px solid black;
+  font-size: 15px;
+  padding: 5px;
+  text-decoration: none;
+  background: rgba(204, 204, 204, 0.5);
+}
+
+.answer {
+  text-decoration: underline blueviolet;
+}
