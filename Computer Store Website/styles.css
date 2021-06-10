@@ -1,0 +1,488 @@
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: 'Raleway';
+}
+body {
+  background-image: url("https://media.gettyimages.com/videos/abstract-smoke-fog-purple-ink-levitation-background-video-id1195295737?s=640x640");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/*sidebar start*/
+.side-btn {
+  position: fixed;
+  z-index: 900;
+  top: 15px;
+  left: 45px;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  border-radius: 3px;
+  background: blueviolet;
+  cursor: pointer;
+  transition: left 0.4s ease; /*What this does is it makes the button transition from the left to the right in 0.4 seconds and ease makes it less static and more smooth*/
+}
+.side-btn.click {
+  left: 260px; 
+}
+.side-btn.click span:before { /*What :before means is it inserts an X everytime the button is clicked*/
+  font-family: verdana;
+  content: 'X'
+}
+.side-btn span {
+  color: #222222;
+  font-size: 28px;
+  line-height: 45px;
+}
+.sidebar.show {
+  left: 0px;
+}
+.sidebar {
+  position: fixed;
+  width: 250px;
+  height: 100%;
+  left: -250px;
+  top: 0;
+  background-color: black;
+  transition: left 0.4s ease; /*This is so that the sidebar also transitions on click of the button*/
+  color: lightgrey;
+  z-index: 100;
+}
+nav ul {
+  background: black;
+  height: 100%;
+  width: 100%;
+}
+nav ul li {
+  line-height: 60px;
+  border-bottom: 1px solid blueviolet;
+}
+nav ul li:last-child {
+  border-bottom: 1px solid rgba(138, 43, 226, 0.5);
+}
+nav ul li a {
+  position: relative;
+  color: lightgrey;
+  text-decoration: none;
+  font-size: 18px;
+  padding-left: 40px;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+  border-left: 5px solid transparent
+}
+nav ul li a:hover {
+  background-color: #222222;
+  color: white;
+}
+nav ul li.active a {
+  color:blueviolet;
+  background-color: #222222;
+  border-left-color: blueviolet;
+}
+nav ul ul {
+  position: static;
+  display: none;
+}
+nav ul .prod-sub.show {
+  display: block;
+}
+nav ul ul li {
+  line-height: 42px;
+  border-bottom: none;
+}
+nav ul ul li a {
+  font-size: 17px;
+  color: lightgrey;
+  padding-left: 80px;
+}
+nav ul li.active ul li a {
+  color: white;
+  background-color: black;
+  border-left-color: transparent;
+}
+nav ul ul li a:hover {
+  color: blueviolet!important;
+  background-color: #222222!important;
+}
+nav ul li a span {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);/*This is so that the arrow is always in the middle after the user presses it again*/
+  font-size: 22px;
+  transition: transform 0.4s; /*This sets the transition time for the translation*/
+}
+nav ul li a span.rotate {
+    transform: translateY(-50%) rotate(-180deg); /*This is basically what the arrow does when the class rotate is toggled, it rotates 180 degrees and stays in the middle*/
+}
+/*end of sidebar*/
+.title {
+  color: white;
+  position: relative;
+  top: 40%;
+  left: 30%;
+  font-size: 80px;
+}
+#slide1 {
+  background-image: url("https://onlyvectorbackgrounds.com/wp-content/uploads/2019/04/Tonal-Ambient-Gradient-Background-Purple.jpg") !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1000px;
+  width: 100%;
+  margin-bottom: 50px;
+  overflow: hidden;
+  display: inline-block;
+}
+.slide {
+  background-color: white;
+  margin: auto;
+  margin-bottom: 50px;
+  height: 280px;
+  width: 90%;
+  border: 0;
+  display: block;
+}
+.text{
+  margin-left: 200px;
+}
+.text table tr, tr td{
+  border: none!important;
+}
+h4 {
+  font-size: 24px;
+}
+.shop-btn {
+  background-color: midnightblue;
+  width: 110px;
+  height: 40px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer; /*It justs makes it so that the cursor when you hover over it is like a finger*/
+}
+.shop-btn a:link {
+  position: relative;
+  top: 10px;
+  text-decoration: none;
+  color: white;
+}
+.shop-btn a:visited {
+  color: white;
+}
+.shop-btn:hover {
+  background-color: lightskyblue;
+  color: black;
+}
+/*Hardware Page*/
+.explanation {
+  color: white;
+  margin: 0 10px 20px 10px;
+  line-height: 32px;
+  display: inline-block;
+}
+.hardwareimg {
+  float: left;
+  margin: 10px;
+}
+.explanation h2 {
+  text-align: center;
+}
+/*Compare*/
+#roundpic1 {
+  position: absolute;
+  top: 20px;
+  left: 530px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-position: center;
+  background-image: url("mac.png");
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#roundpic2 {
+  position: absolute;
+  top: 20px;
+  left: 800px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-position: center;
+  background-image: url("hp.png");
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#roundpic3 {
+  position: absolute;
+  top: 20px;
+  left: 1070px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-position: center;
+  background-image: url("razer.png");
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#comparetable {
+  position: relative;
+  color: white;
+  top: 220px;
+  left: 120px;
+  width: 1200px;
+  z-index: 10;
+  text-align: center;
+}
+#comparetable, tr, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+#comparetable td {
+  padding: 10px;
+}
+#comparetable tr:nth-child(odd) {
+  background-color: white;
+  color: black;
+}
+/*Laptops*/
+#laptoptitle {
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  font-size: 80px;
+}
+.laptop {
+  background-color: white;
+  width: 300px;
+  height: 410px;
+  margin-left: 100px;
+  float: left;
+  text-align: center;
+  z-index: 10;
+  margin-top: 980px;
+  line-height: 35px;
+  margin-bottom: 50px;
+}
+.laptop1 {
+  background-color: white;
+  line-height: 35px;
+  width: 300px;
+  height: 410px;
+  margin-left: 150px;
+  margin-top: 1000px;
+  float: left;
+  text-align: center;
+  z-index: 10;
+  margin-bottom: 50px;
+}
+#razertext {
+  position: relative;
+  bottom: 80px;
+}
+#hptext {
+  position: relative;
+  bottom: 30px;
+}
+#mactext {
+  position: relative;
+  top: 10px;
+}
+/*PC Parts*/
+.part, .part1 {
+  width: 300px;
+  height: 410px;
+  float: left;
+  margin: 50px;
+  background-color: white;
+}
+#allpcparts {
+  margin-top: 800px;
+  margin-left: 150px;
+  text-align: center;
+  z-index: 10;
+}
+.pctext {
+  position: relative;
+  top: 50px;
+}
+/*About Us*/
+#abouttitle {
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 38%;
+  font-size: 80px;
+}
+#portrait {
+  background-image: url("portrait.png");
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  background-size: cover;
+  background-position: center;
+}
+/*Returns*/
+form {
+  padding: 10px;
+}
+#name {
+  width: 100%;
+  height: 100px;
+}
+.name {
+  margin-left: 25px;
+  margin-top: 30px;
+  width: 125px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+}
+.fname {
+  position: relative;
+  left: 200px;
+  top: -37px;
+  line-height: 40px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+}
+.lname {
+  position: relative;
+  left: 417px;
+  top: -80px;
+  line-height: 40px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #555;
+}
+.flabel {
+  position: relative;
+  color: #E5E5E5;
+  text-transform: capitalize; /*Just capitalises the word*/
+  font-size: 14px;
+  left: 203px;
+  top: -45px;
+}
+.llabel {
+  position: relative;
+  color: #E5E5E5;
+  text-transform: capitalize;
+  font-size: 14px;
+  left: 175px;
+  top: -45px;
+}
+.address {
+  position: relative;
+  left: 200px;
+  top: -37px;
+  line-height: 40px;
+  width: 532px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #555;
+}
+.email {
+  position: relative;
+  left: 200px;
+  top: -37px;
+  line-height: 40px;
+  width: 480px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #555;
+}
+.number {
+  position: relative;
+  left: 200px;
+  top: -37px;
+  line-height: 40px;
+  width: 360px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #555;
+}
+.phonenum {
+  position: relative;
+  color: #E5E5E5;
+  text-transform: capitalize;
+  font-size: 16px;
+  left: -150px;
+  top: -2px;
+}
+.option {
+  position: relative;
+  left: 200px;
+  top: -37px;
+  line-height: 40px;
+  width: 532px;
+  border-radius: 6px;
+  padding: 0 22px;
+  font-size: 16px;
+  color: #555;
+  height: 40px;
+  outline: none;
+  overflow: hidden;
+}
+.option .option {
+  font-size: 20px;
+}
+#sure {
+  margin-left: 25px;
+  color: white;
+  font-size: 18px;
+}
+.yesno {
+  font-size: 25px;
+  display: inline-block;
+  padding-right: 70px;
+  margin-top: 15px;
+  color: white;
+}
+.yesnoinput {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+}
+button {
+  background-color: blueviolet !important;
+  color: white;
+  display: block;
+  margin: 20px 0px 0px 20px;
+  text-align: center;
+  border-radius: 12px;
+  border: 2px solid black;
+  padding: 14px 110px;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+button:hover {
+  background-color: #b19cd9!important;
+}
+.formtitle {
+  width: 800px;
+  margin: auto;
+  margin-top: 100px;
+  background-color: rgb(200,200,200,0.6);
+  color: #FFF;
+  padding: 10px 0px 10px 0px;
+  text-align: center;
+  border-radius: 15px 15px 0px 0px;
+  font-size: 12px;
+}
+.formcontent {
+  background-color: rgb(99,99,99,0.5);
+  width: 800px;
+  margin: auto;
+}
